@@ -51,5 +51,4 @@ class CountriesTest extends TestCase
         App::setLocale('de');
         $this->assertEquals('Germany', Countries::get('DE', 'en'));
     }
-
 }

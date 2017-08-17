@@ -40,16 +40,22 @@ class Countries
      * @return Collection
      */
     public function allIn($lang)
-    {    
-        if ($this->collection->get($lang) === null) $this->loadCountries($lang);
+    {
+        if ($this->collection->get($lang) === null) {
+            $this->loadCountries($lang);
+        }
         return $this->collection->get($lang);
     }
 
     public function get($key, $lang = null)
     {
-        if ($lang === null) $lang = App::getLocale();
+        if ($lang === null) {
+            $lang = App::getLocale();
+        }
 
-        if ($this->collection->get($lang) === null) $this->loadCountries($lang);
+        if ($this->collection->get($lang) === null) {
+            $this->loadCountries($lang);
+        }
 
         return $this->collection->get($lang)->get(strtoupper($key));
     }
@@ -61,12 +67,10 @@ class Countries
      */
     protected function loadCountries($lang)
     {
-        
-        if(!File::exists(base_path('vendor/umpirsky/country-list/data/'.$lang.'/country.php'))) {
+        if (!File::exists(base_path('vendor/umpirsky/country-list/data/'.$lang.'/country.php'))) {
             throw new DataSourceNotFoundException(base_path('vendor/umpirsky/country-list/data/'.$lang.'/country.php'));
         }
 
-        $this->collection->put($lang,collect((require base_path('vendor/umpirsky/country-list/data/'.$lang.'/country.php'))));
+        $this->collection->put($lang, collect((require base_path('vendor/umpirsky/country-list/data/'.$lang.'/country.php'))));
     }
-
 }

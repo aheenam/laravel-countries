@@ -42,5 +42,4 @@ abstract class TestCase extends Orchestra
             'Countries' => \Aheenam\Countries\Facades\Countries::class
         ];
     }
-
 }
