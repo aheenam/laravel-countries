@@ -1,0 +1,34 @@
+{
+    "name": "aheenam/countries",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rathes Sachchithananthan",
+            "email": "rathes@aheenam.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.2",
+        "umpirsky/country-list": "~2.0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "orchestra/testbench": "~3.4.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Aheenam\\Countries\\": "src"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Aheenam\\Countries\\Test\\": "tests"
+      }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:windows": "vendor\\bin\\phpunit"
+    }
+}
