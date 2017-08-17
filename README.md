@@ -25,6 +25,15 @@ Then add the service provider must be registered:
 ];
 ```
 
+Also add Countries to your aliases list
+```php
+// config/app.php
+'aliases' => [
+    // ...
+    'Countries' => \Aheenam\Countries\Facades\Countries::class,
+];
+```
+
 Usage
 ---
 There are not that much methods for now. If you are interested in more, feel free to add them and send us a PR.
