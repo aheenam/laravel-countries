@@ -1,5 +1,6 @@
 {
     "name": "aheenam/countries",
+    "description": "A simple Laravel package to handle country lists",
     "type": "laravel-package",
     "license": "MIT",
     "authors": [
